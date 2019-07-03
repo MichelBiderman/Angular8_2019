@@ -1,0 +1,38 @@
+<!-- <div class="alert alert-warning">Liste des plongées</div>
+<div class="alert alert-primary">Liste des plongées</div>
+<div class="alert alert-danger">Liste des plongées</div> -->
+<div class="alert alert-success">{{stateTitre}}</div>
+
+<!-- grille de 12 colonnes -->
+<!-- xs = smartphones | sm(small) = tablettes | md (medium) = pc | lg(large)=grands écrans
+| xl (extra large) -->
+<!-- on appelle ce concept le(s) point(s) de rupture -->
+<div class="row" id="card">
+
+    <div class="col-xs-12 col-sm-6 col-md-3" *ngFor="let dive of stateDiveComp">
+
+        <div class="card">
+            <img class="card-img-top" src="../assets/images/{{dive.photo}}" alt="">
+
+            <div class="card-body">
+
+                <h5 class="card-title">{{dive.name}} 
+                <button class="btn btn-outline-success" [routerLink]="['/liste-des-plongees', dive.id]"
+                [queryParams]="{
+                    diveNom:dive.name,
+                    divePhoto:dive.photo,
+                    divePhotoB:dive.photoB,
+                    diveDescription: dive.description
+                }">Plus d'infos</button>
+                </h5>
+                <!-- <p class="card-text">{{dive.description}}</p> -->
+                <p class="card-text">Niveau : {{dive.level}}</p>
+                <p class="card-text">Latitude : {{dive.latitude}}</p>
+                <p class="card-text">Longitude : {{dive.longitude}}</p>
+                <p class="card-text">Location : {{dive.location}}</p>
+            </div>
+            
+        </div>
+    </div>
+
+<hr>

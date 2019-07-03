@@ -1,0 +1,27 @@
+    <h1 class="text-center">Formulaire de Contact</h1>
+<form #formContact="ngForm" (submit)="showForm(formContact)">
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="fa fa-user text-primary"></i></div>
+                        <input type="text" name="nom" class="form-control" placeholder="Nom ici" required ngModel #nom="ngModel">
+                    </div>
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="fa fa-envelope-o text-primary"></i></div>
+                        <input type="text" name="email" class="form-control" placeholder="Email here" required ngModel #email="ngModel">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <button class="btn btn-secondary btn-lg">Register you here</button>
+</form>
+
+<ul class="list-group">
+    <li class="list-group-item">Nom = {{nom.value}}</li>
+    <li class="list-group-item">email = {{email.value}}</li>
+</ul>

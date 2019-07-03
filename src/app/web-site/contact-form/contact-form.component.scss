@@ -1,0 +1,17 @@
+$couleur1: rgb(9, 9, 58);
+$couleur2: rgb(20, 20, 207);
+$taille: 2rem;
+
+h1{
+    color: $couleur1;
+    height: $taille;
+}
+form{
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+form>li{
+    margin: 0.5rem;
+
+    display: block;
+}

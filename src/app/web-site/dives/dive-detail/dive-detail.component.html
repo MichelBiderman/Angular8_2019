@@ -1,0 +1,10 @@
+<div class="modal-content text-center">  
+    
+    <h1>{{titre}}</h1>
+    <h5>{{nom}}</h5>
+<div *ngIf="[isBig]===true; then block1 else block2"></div>
+<ng-template #block2><img src="./assets/images/{{photoB}}" alt="{{nom}}"></ng-template>
+<ng-template #block1><img src="./assets/images/{{photo}}" alt="{{nom}}"></ng-template>
+<p id="description" class="card-text">{{description}}</p>
+
+<p><button class="btn btn-outline-success" (click)="goBack()">GO BACK</button></p> 
